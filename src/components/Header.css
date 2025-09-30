@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1248px;
+    padding: 16px;
+    margin: 0 auto;
+    transition: var(--theme-transition);
+}
+
+.header-title {
+    font-family: 'Inter-SemiBold';
+}

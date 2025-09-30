@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url(./assets/fonts/Inter-Regular.ttf)
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url(./assets/fonts/Inter-SemiBold.ttf)
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url(./assets/fonts/Inter-Bold.ttf)
+}
+
+:root {
+  --bg-color: #FAF8F5;
+  --text-color: #0D0B07;
+  --subtitle-color: #8A8F88;
+  --search-bg-color: #F4F1ED;
+  --search-text-color: #000000;
+  --search-border-color: #71717A;
+  --divider-color: #E1DED7;
+  --tab-active-bg-color: #E7E4DD;
+  --theme-transition: background-color 1s ease, color 1s ease;
+  --text-transition: color 1s ease;
+  --bg-transition: background-color 1s ease;
+}
+
+[data-theme="dark"] {
+  --bg-color: #010203;
+  --text-color: #E2E5E8;
+  --subtitle-color: #A4A9B0;
+  --search-bg-color: #0A0F14;
+  --search-text-color: #A1A1AA;
+  --search-border-color: #52525B;
+  --divider-color: #10171C;
+  --tab-active-bg-color: #111A22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter-Regular';
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--theme-transition);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: unset;
+  padding: unset;
+}
+
+.font-semibold {
+  font-family: 'Inter-SemiBold';
+}
+
+.font-bold {
+  font-family: 'Inter-Bold';
+}

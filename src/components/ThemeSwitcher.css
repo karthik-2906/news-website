@@ -1,0 +1,15 @@
+.theme-switcher-btn {
+    height: 36px;
+    width: 36px;
+    color: var(--text-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--text-transition);
+}
+
+.theme-switcher-btn:hover {
+    background-color: var(--search-bg-color);
+}

@@ -1,0 +1,12 @@
+.category-nav {
+    border-block: 1px solid var(--divider-color);
+    transition: var(--theme-transition), border-block-color 1s ease;
+}
+
+.category-nav-container {
+    max-width: 1248px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display: flex;
+    gap: 0.25rem;
+}

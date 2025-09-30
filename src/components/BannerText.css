@@ -1,0 +1,22 @@
+.banner-text-container {
+    max-width: 1248px;
+    padding: 32px 16px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner-text-title {
+    font-family: 'Inter-SemiBold';
+    font-size: 3.75rem;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    transition: var(--text-transition);
+}
+
+.banner-text-description {
+    font-size: 1.125rem;
+    color: var(--subtitle-color);
+    max-width: 42rem;
+    margin: 0 auto;
+    transition: var(--text-transition);
+}

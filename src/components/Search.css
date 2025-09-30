@@ -1,0 +1,29 @@
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-input {
+    width: 100%;
+    background-color: var(--search-bg-color);
+    color: var(--search-text-color);
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 0.5rem;
+    transition: var(--theme-transition);
+}
+
+.search-input:focus {
+    border-color: var(--search-border-color);
+}
+
+.search-icon {
+    color: var(--search-border-color);
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
