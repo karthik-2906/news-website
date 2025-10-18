@@ -1,0 +1,26 @@
+.footer-container {
+    border-top: 1px solid var(--divider-color);
+    transition: var(--theme-transition), border-top-color 1s ease;
+}
+
+.footer {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1248px;
+    padding: 24px 16px;
+    margin: 0 auto;
+    transition: var(--theme-transition);
+}
+
+.footer-portfolio-link {
+    color: var(--text-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-github-link {
+    color: var(--text-color);
+    text-decoration: none;
+}

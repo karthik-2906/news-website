@@ -10,3 +10,86 @@
 .header-title {
     font-family: 'Inter-SemiBold';
 }
+
+.header-right-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.country-toggle-container {
+    position: relative;
+}
+
+.country-toggle-btn {
+    height: 36px;
+    width: 36px;
+    color: var(--text-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--text-transition);
+}
+
+.country-toggle-btn:hover {
+    background-color: var(--search-bg-color);
+}
+
+.country-dropdown {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+    z-index: 10;
+    animation: dropdown-fade 0.2s ease forwards;
+}
+
+.country-flag-icon {
+    height: 20px;
+}
+
+.country-dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: var(--text-transition);
+}
+
+.country-dropdown-item:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.country-dropdown-item:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.country-dropdown-item:hover {
+    background-color: var(--search-bg-color);
+}
+
+.country-dropdown-item>img {
+    height: 16px;
+}
+
+@keyframes dropdown-fade {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -16,12 +16,15 @@
 :root {
   --bg-color: #FAF8F5;
   --text-color: #0D0B07;
-  --subtitle-color: #8A8F88;
+  --subtitle-color: #6E736C;
   --search-bg-color: #F4F1ED;
   --search-text-color: #000000;
   --search-border-color: #71717A;
   --divider-color: #E1DED7;
   --tab-active-bg-color: #E7E4DD;
+  --card-bg-color: #FFFFFF;
+  --skeleton-color: #E0E0E0;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   --theme-transition: background-color 1s ease, color 1s ease;
   --text-transition: color 1s ease;
   --bg-transition: background-color 1s ease;
@@ -36,6 +39,9 @@
   --search-border-color: #52525B;
   --divider-color: #10171C;
   --tab-active-bg-color: #111A22;
+  --card-bg-color: #0A0F14;
+  --skeleton-color: #3C4A5A;
+  --box-shadow: 0 2px 6px rgba(255, 255, 255, 0.08);
 }
 
 * {
@@ -67,4 +73,15 @@ button {
 
 .font-bold {
   font-family: 'Inter-Bold';
+}
+
+.load-more-btn {
+  display: block;
+  font-size: 1rem;
+  color: var(--card-bg-color);
+  background-color: var(--text-color);
+  padding: 12px;
+  border-radius: 5px;
+  margin: 2rem auto;
+  cursor: pointer;
 }
