@@ -35,6 +35,7 @@ export const App = () => {
         "other"
     ];
     const [activeTab, setActiveTab] = useState("top");
+    const [searchTerm, setSearchTerm] = useState("");
 
     const [loading, setLoading] = useState(true);
     const [initialLoad, setInitialLoad] = useState(true);
@@ -61,6 +62,10 @@ export const App = () => {
 
         if (nextPage && !isNewLoad) {
             params.append("page", nextPage);
+        }
+
+        if (searchTerm.trim() !== "") {
+            params.append("q", searchTerm.trim());
         }
 
         const url = `https://newsdata.io/api/1/news?${params.toString()}`;
@@ -93,7 +98,7 @@ export const App = () => {
 
     useEffect(() => {
         loadArticles(true);
-    }, [selectedCountry, activeTab]);
+    }, [selectedCountry, activeTab, searchTerm]);
 
     return (
         <ThemeProvider>
@@ -101,6 +106,7 @@ export const App = () => {
                 <Header
                     selectedCountry={selectedCountry}
                     onCountryChange={handleCountryChange}
+                    onSearchEnter={setSearchTerm}
                 />
                 <CategoryNav
                     categories={categories}
@@ -109,12 +115,18 @@ export const App = () => {
                 />
                 <BannerText />
                 <NewsGrid articles={articles} loading={loading} initialLoad={initialLoad} />
-                <button
-                    className='load-more-btn font-semibold'
-                    onClick={() => loadArticles()}
-                >
-                    LOAD MORE
-                </button>
+                {articles.length > 0 ? (
+                    <button
+                        className='load-more-btn font-semibold'
+                        onClick={() => loadArticles()}
+                    >
+                        LOAD MORE
+                    </button>
+                ) : (
+                    <p className="error-msg">
+                        ❌ No results found. Try adjusting your search term or filters. You may have also run out of free credits for the day
+                    </p>
+                )}
                 <Footer />
             </div>
         </ThemeProvider>

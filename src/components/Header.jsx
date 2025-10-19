@@ -14,7 +14,7 @@ const COUNTRY_OPTIONS = [
     { country: "Kuwait", img: kuwaitFlag, countryApiCode: "kw" }
 ];
 
-export default function Header({ selectedCountry, onCountryChange }) {
+export default function Header({ selectedCountry, onCountryChange, onSearchEnter }) {
     const [showDropdown, setShowDropdown] = useState(false);
 
     const handleSelectCountry = (country) => {
@@ -25,7 +25,7 @@ export default function Header({ selectedCountry, onCountryChange }) {
     return (
         <div className="header">
             <h2 className="header-title">NewsHub</h2>
-            <Search />
+            <Search onSearchEnter={onSearchEnter} />
             <div className="header-right-container">
                 <ThemeSwitcher />
                 <div className="country-toggle-container">

@@ -1,5 +1,6 @@
 .search-container {
     position: relative;
+    align-content: center;
     width: 100%;
     max-width: 400px;
 }
@@ -8,7 +9,7 @@
     width: 100%;
     background-color: var(--search-bg-color);
     color: var(--search-text-color);
-    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
     border: 1px solid transparent;
     outline: none;
     border-radius: 0.5rem;
@@ -19,11 +20,14 @@
     border-color: var(--search-border-color);
 }
 
-.search-icon {
+.search-btn {
+    height: 16px;
+    width: 16px;
     color: var(--search-border-color);
     position: absolute;
-    left: 0.75rem;
+    right: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: none;
+    /* pointer-events: none; */
+    cursor: pointer;
 }

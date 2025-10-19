@@ -1,15 +1,13 @@
-export const fetchData = async (endpoint, params = {}) => {
+export const fetchData = async (url) => {
     try {
-        const queryString = new URLSearchParams(params).toString();
-        const url = queryString ? `${endpoint}?${queryString}` : endpoint;
-
         const res = await fetch(url);
-        if (!res.ok) throw new Error("Network response was not ok");
-
-        const data = await res.json();
-        return data;
+        if (!res.ok) {
+            // console.warn(`Fetch failed: ${res.status} ${res.statusText} — URL: ${url}`);
+            return null;
+        }
+        return await res.json();
     } catch (err) {
-        console.error(err);
+        // console.error("Error fetching data:", err);
         return null;
     }
 };

@@ -85,3 +85,14 @@ button {
   margin: 2rem auto;
   cursor: pointer;
 }
+
+.error-msg {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-family: 'Inter-SemiBold';
+  max-width: 600px;
+  padding: 64px 16px;
+  margin: 0 auto;
+  text-align: center;
+  transition: var(--text-transition);
+}
